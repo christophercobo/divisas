@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transacciones</title>
+    <script src="divisas.js"></script>
+</head>
+<body>
+    <h1>Transacciones</h1>
+    <form>
+        <label for="fecha">Fecha:</label>
+        <input type="text" id="fecha" readonly><br><br>
+
+        <label for="hora">Hora:</label>
+        <span id="hora"></span><br><br>
+
+        <label for="tipo_documento">Tipo de Documento:</label>
+        <select id="tipo_documento" onchange="mostrarNombreCliente()"></select><br><br>
+
+        <label for="numero_documento">Número de Documento:</label>
+        <input type="text" id="numero_documento" onblur="mostrarNombreCliente()"><br><br>
+
+        <label for="nombre_cliente">Nombre del Cliente:</label>
+        <input type="text" id="nombre_cliente" readonly><br><br>
+
+        <label for="moneda">Moneda a Comprar:</label>
+        <select id="moneda" onchange="llenarTasaCompra()"></select><br><br>
+
+        <label for="tasa_compra">Tasa de Compra:</label>
+        <input type="text" id="tasa_compra" readonly><br><br>
+
+        <label for="cantidad_comprar">Cantidad a Comprar:</label>
+        <input type="text" id="cantidad_comprar" onblur="calcularValorPagar()"><br><br>
+
+        <label for="valor_pagar">Valor a Pagar al Cliente:</label>
+        <input type="text" id="valor_pagar" readonly><br><br>
+    </form>
+</body>
+</html>
